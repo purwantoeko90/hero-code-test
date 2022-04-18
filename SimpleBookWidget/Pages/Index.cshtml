@@ -1,0 +1,109 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Start Book Your Holiday Here</p>
+</div>
+<br />
+@if (Model.hiddenSearch == false)
+{
+    <div>
+        <form method="post">
+            <table>
+                <tr style="vertical-align: middle;">
+                    <td><input type="text" name="txtSearch" /></td>
+                    <td><button type="submit" asp-page-handler="Search">Search</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form method="post">
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Category
+                        </th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.productList)
+                    {
+                        <tr class="text-center">
+                            <td>
+                                @item.id
+                            </td>
+                            <td class="text-left">
+                                @item.name
+                            </td>
+                            <td>
+                                @item.category
+                            </td>
+                            <td>
+                                <button type="submit" asp-page-handler="Book" name="id" value="@item.id">Book</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </form>
+    </div>
+}
+@if (Model.hiddenBook == false)
+{
+    <div>
+        <form method="post">
+            <table class="table">
+                <tr>
+                    <td>Id</td>
+                    <td>:</td>
+                    <td>@Model.product.id</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>:</td>
+                    <td>@Model.product.name</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>:</td>
+                    <td>@Model.product.category</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>:</td>
+                    <td>@Model.product.longDescription</td>
+                </tr>
+                <tr>
+                    <td>Choose Date</td>
+                </tr>
+                <tr>
+                    <td><input type="date" name="dtStart" /></td>
+                    <td>to</td>
+                    <td><input type="date" name="dtEnd" /></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" asp-page-handler="Check">Check Avaibility</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+}
+
+@if(Model.showSchedule)
+{
+
+}

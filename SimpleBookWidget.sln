@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBookWidget", "SimpleBookWidget\SimpleBookWidget.csproj", "{45280FC9-1988-4FEF-80DF-83CCC868003F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Services", "Booking.Services\Booking.Services.csproj", "{8EE9CAF8-D6DE-4048-BBA7-D1FDB89AC7A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45280FC9-1988-4FEF-80DF-83CCC868003F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45280FC9-1988-4FEF-80DF-83CCC868003F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45280FC9-1988-4FEF-80DF-83CCC868003F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45280FC9-1988-4FEF-80DF-83CCC868003F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE9CAF8-D6DE-4048-BBA7-D1FDB89AC7A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE9CAF8-D6DE-4048-BBA7-D1FDB89AC7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE9CAF8-D6DE-4048-BBA7-D1FDB89AC7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE9CAF8-D6DE-4048-BBA7-D1FDB89AC7A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95D506F1-BDE2-4226-B59D-DFC229081485}
+	EndGlobalSection
+EndGlobal

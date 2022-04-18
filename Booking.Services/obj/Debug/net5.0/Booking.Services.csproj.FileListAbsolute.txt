@@ -1,0 +1,12 @@
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\bin\Debug\net5.0\Booking.Services.deps.json
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\bin\Debug\net5.0\Booking.Services.dll
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\bin\Debug\net5.0\ref\Booking.Services.dll
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\bin\Debug\net5.0\Booking.Services.pdb
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\obj\Debug\net5.0\Booking.Services.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\obj\Debug\net5.0\Booking.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\obj\Debug\net5.0\Booking.Services.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\obj\Debug\net5.0\Booking.Services.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\obj\Debug\net5.0\Booking.Services.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\obj\Debug\net5.0\Booking.Services.dll
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\obj\Debug\net5.0\ref\Booking.Services.dll
+C:\Users\ASUS\source\repos\SimpleBookWidget\Booking.Services\obj\Debug\net5.0\Booking.Services.pdb
