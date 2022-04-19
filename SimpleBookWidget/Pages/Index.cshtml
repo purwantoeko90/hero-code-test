@@ -9,6 +9,19 @@
     <p>Start Book Your Holiday Here</p>
 </div>
 <br />
+@if (Model.hiddenSearch == true)
+{
+    <div>
+        <form method="post">
+            <table>
+                <tr style="vertical-align: middle;">
+                    <td><button type="submit" asp-page-handler="Back" name="currentProductId" value="@Model.currentProductId">Back</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+}
+<br />
 @if (Model.hiddenSearch == false)
 {
     <div>
@@ -96,14 +109,66 @@
                     <td><input type="date" name="dtEnd" /></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" asp-page-handler="Check">Check Avaibility</button></td>
+                    <td><button type="submit" asp-page-handler="Check" name="productId" value="@Model.product.id">Check Avaibility</button></td>
                 </tr>
             </table>
         </form>
     </div>
 }
 
-@if(Model.showSchedule)
+@if (Model.showSchedule)
 {
+    <div>
+        @if (Model.schedulesList.Count > 0)
+        {
 
+            <form method="post">
+                <table class="table">
+                    <thead>
+                        <tr class="text-center">
+                            <th>
+                                Date
+                            </th>
+                            <th>
+                                Duration
+                            </th>
+                            <th>
+                                Avaibility Pax
+                            </th>
+                            <th>
+                                Available
+                            </th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.schedulesList)
+                        {
+                            <tr class="text-center">
+                                <td>
+                                    @item.start
+                                </td>
+                                <td class="text-left">
+                                    @item.durationText
+                                </td>
+                                <td>
+                                    @item.title
+                                </td>
+                                <td>
+                                    @item.available
+                                </td>
+                                <td>
+                                    <button type="submit" asp-page-handler="CheckPrice" name="scheduleId" value="@item.scheduleId">Check Price</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </form>
+        }
+        else
+        {
+            <h6>No Schedule available on this date</h6>
+        }
+    </div>
 }

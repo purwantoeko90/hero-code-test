@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Booking.Services.Model
 {
-    public class pax
+    public class Pax
     {
         public long id { get; set; }
         public string first { get; set; }
@@ -23,19 +23,28 @@ namespace Booking.Services.Model
         public string postCode { get; set; }
     }
 
-    public class schedule
+    public class Schedule
     {
-        public string start { get; set; }
-        public string end { get; set; }
-        public long id { get; set; }
-        public long scheduleId { get; set; }
+        public int id { get; set; }
+        public int productId { get; set; }
+        public DateTime start { get; set; }
+        public DateTime end { get; set; }
+        public Nullable<int> overnights { get; set; }
+        public int duration { get; set; }
+        public string durationText { get; set; }
+        public int scheduleId { get; set; }
         public int availability { get; set; }
+        public string title { get; set; }
+        public string color { get; set; }
         public bool available { get; set; }
-        public bool cta { get; set; }
-        public bool ctd { get; set; }
-        public int minStay { get; set; }
-        public int maxStay { get; set; }
-        public bool stopsell { get; set; }
+        public object cta { get; set; }
+        public object ctd { get; set; }
+        public object minStay { get; set; }
+        public object maxStay { get; set; }
+        public bool isOpenDated { get; set; }
+        public object allowAllDayEntry { get; set; }
+        public object allDayEventLastAdmittance { get; set; }
+        public bool isDeleted { get; set; }
     }
 
 

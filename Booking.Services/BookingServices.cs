@@ -14,13 +14,14 @@ namespace Booking.Services
     {
         Task<List<Product>> getProducts();
         Task<Product> getProductById(int id);
+        Task<List<Schedule>> getSchedule(int id, string startDt, string endDt = "");
     }
 
     public class BookingServices : IBookingServices
     {
         HttpClient _httpClient = new HttpClient();
         string url = "https://staging.hero.travel/api/v2";
-        string apiKey = "5907faba-c11b-4f12-b8bb-28fbcd5c3803";
+        string apiKey = "";
 
         public BookingServices ()
         {
@@ -31,7 +32,7 @@ namespace Booking.Services
             var client = new RestClient(url);
             client.AddDefaultHeader("apiKey", apiKey);
             client.AddDefaultHeader("Content-Type", "application-json");
-            var request = new RestRequest("/products?cat=1");
+            var request = new RestRequest("/products?cat=1&pL=100");
             var response = await client.ExecuteAsync(request);
             var data = JsonConvert.DeserializeObject<RootobjectProduct>(response.Content);
             return data.products;
@@ -46,6 +47,21 @@ namespace Booking.Services
             var response = await client.ExecuteAsync(request);
             var data = JsonConvert.DeserializeObject<RootobjectProduct>(response.Content);
             return data.products[0];
+        }
+
+        public async Task<List<Schedule>> getSchedule(int id, string startDt, string endDt = "")
+        {
+            var client = new RestClient(url);
+            var data = new List<Schedule>();
+            client.AddDefaultHeader("apiKey", apiKey);
+            client.AddDefaultHeader("Content-Type", "application-json");
+            var request = new RestRequest("/schedule/" + id + "/" + startDt + "/" + endDt);
+            var response = await client.ExecuteAsync(request);
+            if (!response.Content.Contains("not found"))
+            {
+                data = JsonConvert.DeserializeObject<List<Schedule>>(response.Content);
+            }
+            return data;
         }
     }
 }
